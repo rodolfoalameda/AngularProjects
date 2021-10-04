@@ -1,0 +1,14 @@
+package com.impacta.todo.domain;
+
+import java.time.LocalDateTime;
+
+public class Todo {
+	
+	private Integer id;
+	private String titulo;
+	private String descricao;
+	private LocalDateTime dataParaFinalizar;
+	private Boolean finalizado = false;
+	
+
+}

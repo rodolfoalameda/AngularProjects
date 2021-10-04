@@ -1,0 +1,5 @@
+package com.impacta.todo.domain;
+
+public class Todo {
+
+}

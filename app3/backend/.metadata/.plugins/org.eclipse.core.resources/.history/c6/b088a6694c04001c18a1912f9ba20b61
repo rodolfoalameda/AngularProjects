@@ -1,0 +1,26 @@
+package com.impacta.todo.domain;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class Todo {
+	
+	private Integer id;
+	private String titulo;
+	private String descricao;
+	private LocalDateTime dataParaFinalizar;
+	private Boolean finalizado = false;
+	
+	
+	
+
+}

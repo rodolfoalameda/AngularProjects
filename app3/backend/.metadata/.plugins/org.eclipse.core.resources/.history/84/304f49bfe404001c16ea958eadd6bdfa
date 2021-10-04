@@ -1,0 +1,33 @@
+package com.impacta.todo.services;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.impacta.todo.domain.Todo;
+import com.impacta.todo.repositories.TodoRepository;
+
+@Service
+public class DBService {
+
+	@Autowired
+	private TodoRepository todoRepository;
+
+	public void instanciaDB() {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		Todo t1 = new Todo(null, "Estudos", "Estudar Spring + Angular",
+				LocalDateTime.parse("25/03/2021 17:18", formatter), false);
+		Todo t2 = new Todo(null, "Saude", "Meditar",
+				LocalDateTime.parse("25/03/2021 17:18", formatter), false);
+		Todo t3 = new Todo(null, "Estudos", "Boostrap + CSS",
+				LocalDateTime.parse("25/03/2021 17:18", formatter), true);
+		Todo t4 = new Todo(null, "Saude", "Caminhada",
+				LocalDateTime.parse("25/03/2021 17:18", formatter), true);
+
+		todoRepository.saveAll(Arrays.asList(t1, t2, t3, t4));
+	}
+
+}

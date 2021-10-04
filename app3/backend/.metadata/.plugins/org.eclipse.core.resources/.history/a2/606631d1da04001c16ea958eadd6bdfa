@@ -1,0 +1,20 @@
+package com.impacta.todo.controllers;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.impacta.todo.domain.Todo;
+
+@RestController
+@RequestMapping(value = "/todos")
+public class TodoController {
+
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Todo> findById(@PathVariable Integer id) {
+		return null;
+	}
+
+}

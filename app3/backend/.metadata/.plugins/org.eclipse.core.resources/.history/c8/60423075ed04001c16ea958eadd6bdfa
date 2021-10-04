@@ -1,0 +1,9 @@
+package com.impacta.todo.services.exception;
+
+public class ObjectNotFound extends RuntimeException{
+
+	public ObjectNotFound(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.impacta.todo.controllers.handlers;
+
+public class StandardError {
+
+}

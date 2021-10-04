@@ -1,0 +1,14 @@
+package com.impacta.todo.controllers.handlers;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+public class StandardError {
+
+	private Long timeStamp;
+	private Integer status;
+	private String menssage;
+
+}

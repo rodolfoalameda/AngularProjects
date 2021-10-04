@@ -1,0 +1,25 @@
+package com.impacta.todo.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.impacta.todo.domain.Todo;
+import com.impacta.todo.repositories.TodoRepository;
+
+@Service
+public class TodoService {
+
+	@Autowired
+	private TodoRepository todoRepository;
+
+	public List<Todo> findAllOpen() {
+		return todoRepository.findAll();
+	}
+
+	public Todo findById(Integer id) {
+		return todoRepository.findById(id).orElse(null);
+	}
+
+}
